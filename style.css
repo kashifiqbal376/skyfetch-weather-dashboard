@@ -1,117 +1,75 @@
 body {
+    font-family: Arial, sans-serif;
     text-align: center;
-    font-family: Arial;
-    background: linear-gradient(to right, purple, blue);
+    background: linear-gradient(to right, #667eea, #764ba2);
     color: white;
-    padding: 50px;
-}
-
-#weather-container {
-    background: rgba(255,255,255,0.2);
+    margin: 0;
     padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
 }
 
-/* 🔎 Search Section */
 .search-section {
-    margin-bottom: 30px;
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap; /* Makes it responsive */
+    margin-bottom: 15px;
 }
 
-/* 🏙 City Input */
-#city-input {
-    padding: 12px 20px;
-    border-radius: 25px;
-    border: 2px solid #ddd;
-    flex: 1;
-    min-width: 220px;
-    font-size: 1rem;
-    outline: none;
-    transition: 0.3s ease;
+input {
+    padding: 8px;
+    width: 200px;
 }
 
-/* 🔍 Search Button */
-#search-btn {
-    padding: 12px 30px;
-    background: linear-gradient(to right, purple, blue);
-    color: white;
-    border: none;
-    border-radius: 25px;
+button {
+    padding: 8px 12px;
     cursor: pointer;
-    font-size: 1rem;
-    transition: 0.3s ease;
 }
 
-/* 🔵 Input Focus State */
-#city-input:focus {
-    border-color: #6a0dad; /* brighter purple */
-    box-shadow: 0 0 10px rgba(106, 13, 173, 0.6);
-    background-color: rgba(255, 255, 255, 0.95);
-    transform: scale(1.02);
+.weather-info img {
+    width: 80px;
 }
 
-/* 🟣 Button Hover State */
-#search-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    opacity: 0.95;
-}
-/* ❌ Error Message */
-.error-message {
-    background: #ffe6e6;
-    color: #8b0000;
-    padding: 20px;
-    border-radius: 10px;
-    border-left: 6px solid red;
-    margin-top: 20px;
-}
-
-/* ⏳ Loading Container */
-.loading-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-/* 🔄 Spinner */
-.spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid #f3f3f3;
-    border-top: 5px solid #667eea;
-    border-radius: 50%;
-    margin: 0 auto 15px;
-    animation: spin 1s linear infinite;
-}
-
-/* 🔁 Animation */
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
 .forecast-section {
     margin-top: 30px;
-    padding-top: 20px;
-    border-top: 2px solid #eee;
 }
 
 .forecast-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 15px;
+    margin-top: 10px;
 }
 
 .forecast-card {
-    background: #22cede;
+    background: rgba(255,255,255,0.2);
     padding: 15px;
-    border-radius: 12px;
-    text-align: center;
+    border-radius: 10px;
     transition: 0.3s;
 }
 
 .forecast-card:hover {
     transform: translateY(-5px);
+}
+
+.recent-searches-section {
+    margin: 20px 0;
+}
+
+.recent-search-btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background: white;
+    color: #333;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.recent-search-btn:hover {
+    background: #333;
+    color: white;
+}
+
+.clear-history-btn {
+    font-size: 0.8rem;
+    background: white;
+    color: red;
+    border: none;
 }
